@@ -38,11 +38,9 @@ async function onFormSubmit(event) {
     return;
   }
 
-  // Новий запит — скидаємо стан
-  if (query !== currentQuery) {
-    currentQuery = query;
-    currentPage = 1;
-  }
+  // Нове слово → скидаємо сторінку
+  currentQuery = query;
+  currentPage = 1;
 
   clearGallery();
   hideLoadMoreButton();
@@ -61,7 +59,6 @@ async function fetchAndRenderImages({ isLoadMore }) {
     const data = await getImagesByQuery(currentQuery, currentPage);
     const { hits, totalHits: apiTotalHits } = data;
 
-    // Зберігаємо загальну кількість зображень
     if (currentPage === 1) {
       totalHits = apiTotalHits;
     }
@@ -81,7 +78,6 @@ async function fetchAndRenderImages({ isLoadMore }) {
 
     const totalPages = Math.ceil(totalHits / PER_PAGE);
 
-    // Після відмальовки збільшуємо сторінку для наступного запиту
     currentPage += 1;
 
     if (currentPage <= totalPages) {
@@ -95,11 +91,11 @@ async function fetchAndRenderImages({ isLoadMore }) {
       });
     }
 
-    // Плавний скрол тільки для Load more
     if (isLoadMore) {
       smoothScrollAfterLoad();
     }
   } catch (error) {
+    console.error(error);
     hideLoadMoreButton();
     iziToast.error({
       title: 'Error',

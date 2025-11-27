@@ -10,15 +10,13 @@
 
 .page {
   width: 1440px;
-  /* height: 496px;  <-- фіксовану висоту краще прибрати */
-  min-height: 496px;
+  height: 496px;
   margin: 0 auto;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 36px;
-  padding-bottom: 36px;
 }
 
 /* =====================================
@@ -63,7 +61,7 @@
   box-shadow: 0 0 0 1px var(--primary-color);
 }
 
-/* ----- BUTTON (Search) ----- */
+/* ----- BUTTON ----- */
 
 .form-button {
   min-width: 91px;
@@ -82,6 +80,24 @@
 .form-button:hover,
 .form-button:focus {
   background: var(--primary-hover);
+}
+
+/* =====================================
+   LOADER
+===================================== */
+
+/* Лоадер */
+.loader {
+  display: block;
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #2e2f42;
+}
+
+.is-hidden {
+  display: none;
 }
 
 /* =====================================
@@ -134,7 +150,7 @@
 }
 
 /* =====================================
-   LOAD MORE + LOADER
+   LOAD MORE + LOADER (ДОДАНО)
 ===================================== */
 
 .load-more-wrapper {
@@ -162,17 +178,4 @@
 .load-more-button:hover,
 .load-more-button:focus {
   background: var(--primary-hover);
-}
-
-/* Лоадер */
-.loader {
-  display: block;
-  font-size: 16px;
-  line-height: 1.5;
-  text-align: center;
-  color: #2e2f42;
-}
-
-.is-hidden {
-  display: none;
 }

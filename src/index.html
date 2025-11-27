@@ -8,6 +8,7 @@
   <title>Image Search App</title>
   <link rel="stylesheet" href="https://unpkg.com/css-loader@1.0.0/dist/css-loader.css" />
   <link rel="stylesheet" href="./css/styles.css" />
+
 </head>
 
 <body>
@@ -19,18 +20,17 @@
       <button class="form-button" type="submit">Search</button>
     </form>
 
-    <!-- ГАЛЕРЕЯ -->
-    <ul class="gallery"></ul>
 
     <!-- БЛОК КНОПКИ ТА ЛОАДЕРА -->
-    <div class="load-more-wrapper">
-      <button class="load-more-button is-hidden" type="button">
-        Load more
-      </button>
+  <div class="load-more-wrapper">
+    <button class="load-more-button is-hidden" type="button">
+      Load more
+    </button>
+    <span class="loader is-hidden">Loading images, please wait...</span>
+  </div>
 
-      <!-- ЛОАДЕР ПІД КНОПКОЮ -->
-      <span class="loader is-hidden">Loading images, please wait...</span>
-    </div>
+    <!-- ГАЛЕРЕЯ -->
+    <ul class="gallery"></ul>
   </main>
 
   <script type="module" src="./main.js"></script>

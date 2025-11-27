@@ -8,7 +8,7 @@ const DEFAULT_PARAMS = {
   image_type: 'photo',
   orientation: 'horizontal',
   safesearch: true,
-  per_page: 15, //  15 елементів на сторінку
+  per_page: 15, // 🔹 15 елементів за запит
 };
 
 export async function getImagesByQuery(query, page) {
@@ -20,5 +20,5 @@ export async function getImagesByQuery(query, page) {
     },
   });
 
-  return response.data; // повертаємо data
+  return response.data; // саме data
 }
