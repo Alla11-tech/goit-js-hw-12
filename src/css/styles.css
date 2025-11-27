@@ -7,12 +7,172 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.page {
+  width: 1440px;
+  /* height: 496px;  <-- фіксовану висоту краще прибрати */
+  min-height: 496px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+/* =====================================
+   FORM + INPUT + BUTTON
+===================================== */
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+/* ----- INPUT ----- */
+
+.form-input {
+  width: 371px;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color); /* normal */
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: #808080;
+}
+
+/* hover */
+.form-input:hover {
+  border-color: #000000;
+}
+
+/* focus */
+.form-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+/* ----- BUTTON (Search) ----- */
+
+.form-button {
+  min-width: 91px;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary-color);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* hover */
+.form-button:hover,
+.form-button:focus {
+  background: var(--primary-hover);
+}
+
+/* =====================================
+   GALLERY
+===================================== */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: 24px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-item {
+  background-color: #ffffff;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+
+.gallery-link {
+  display: block;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.info p {
+  margin: 0;
+  text-align: center;
+}
+
+.info b {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+/* =====================================
+   LOAD MORE + LOADER
+===================================== */
+
+.load-more-wrapper {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Кнопка Load more */
+.load-more-button {
+  min-width: 125px;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary-color);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.load-more-button:hover,
+.load-more-button:focus {
+  background: var(--primary-hover);
+}
+
+/* Лоадер */
+.loader {
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #2e2f42;
+}
+
+.is-hidden {
+  display: none;
+}

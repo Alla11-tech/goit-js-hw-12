@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Search App</title>
+  <link rel="stylesheet" href="https://unpkg.com/css-loader@1.0.0/dist/css-loader.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
 
-    <load src="./partials/footer.html" />
+<body>
+  <main class="page">
+    <form class="form">
+      <label class="form-label">
+        <input class="form-input" type="text" name="search-text" placeholder="Search images..." required />
+      </label>
+      <button class="form-button" type="submit">Search</button>
+    </form>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+    <!-- ГАЛЕРЕЯ -->
+    <ul class="gallery"></ul>
+
+    <!-- БЛОК КНОПКИ ТА ЛОАДЕРА -->
+    <div class="load-more-wrapper">
+      <button class="load-more-button is-hidden" type="button">
+        Load more
+      </button>
+
+      <!-- ЛОАДЕР ПІД КНОПКОЮ -->
+      <span class="loader is-hidden">Loading images, please wait...</span>
+    </div>
+  </main>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>
