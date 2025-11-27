@@ -7,10 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Image Search App</title>
   <link rel="stylesheet" href="https://unpkg.com/css-loader@1.0.0/dist/css-loader.css" />
+
   <script type="module" crossorigin src="/https://goit-js-hw-12/index.js"></script>
   <link rel="modulepreload" crossorigin href="/https://goit-js-hw-12/assets/vendor-DvfmeZXB.js">
   <link rel="stylesheet" crossorigin href="/https://goit-js-hw-12/assets/vendor-DumFYO8Z.css">
-  <link rel="stylesheet" crossorigin href="/https://goit-js-hw-12/assets/index-_lhkRxA6.css">
+  <link rel="stylesheet" crossorigin href="/https://goit-js-hw-12/assets/index-Bk8WsQLU.css">
 </head>
 
 <body>
@@ -22,18 +23,17 @@
       <button class="form-button" type="submit">Search</button>
     </form>
 
-    <!-- ГАЛЕРЕЯ -->
-    <ul class="gallery"></ul>
 
     <!-- БЛОК КНОПКИ ТА ЛОАДЕРА -->
-    <div class="load-more-wrapper">
-      <button class="load-more-button is-hidden" type="button">
-        Load more
-      </button>
+  <div class="load-more-wrapper">
+    <button class="load-more-button is-hidden" type="button">
+      Load more
+    </button>
+    <span class="loader is-hidden">Loading images, please wait...</span>
+  </div>
 
-      <!-- ЛОАДЕР ПІД КНОПКОЮ -->
-      <span class="loader is-hidden">Loading images, please wait...</span>
-    </div>
+    <!-- ГАЛЕРЕЯ -->
+    <ul class="gallery"></ul>
   </main>
 
 </body>
