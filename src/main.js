@@ -38,7 +38,6 @@ async function onFormSubmit(event) {
     return;
   }
 
-  // Нове слово → скидаємо сторінку
   currentQuery = query;
   currentPage = 1;
 
@@ -74,10 +73,9 @@ async function fetchAndRenderImages({ isLoadMore }) {
       return;
     }
 
-    createGallery(hits);
+    createGallery(hits); // 🔹 тут додаються картки
 
     const totalPages = Math.ceil(totalHits / PER_PAGE);
-
     currentPage += 1;
 
     if (currentPage <= totalPages) {
